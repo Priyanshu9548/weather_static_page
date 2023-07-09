@@ -4,7 +4,7 @@ import ThreeDots from "../Components/Threedots";
 import { MdToggleOn, MdToggleOff } from "react-icons/md";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { BsFillSunriseFill, BsFillSunsetFill } from "react-icons/bs";
-import { GrPrevious, GrNext } from "react-icons/gr";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { BsSun } from "react-icons/bs";
 import weather from "../Images/weather.png";
 import Chart from "../Components/Chart";
@@ -16,8 +16,8 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[#B5D8FF] h-screen flex justify-center items-center">
-      <div className="w-3/4 h-5/6 bg-[#5C9CE5] rounded-3xl flex">
+    <div className="bg-[#B5D8FF] flex justify-center items-center">
+      <div className="w-3/4 h-screen bg-[#5C9CE5] rounded-3xl flex">
         <div>
           <div className="ml-12 text-sm">
             <div className="flex mt-8  ">
@@ -71,9 +71,9 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex mt-16 text-white">
+            <div className="flex mt-16 items-center text-white">
               <span className="text-white">
-                <GrPrevious />
+                <RiArrowLeftSLine className="w-7 h-7" />
               </span>
               <div className="ml-10 text-7xl">
                 <span>
@@ -81,14 +81,14 @@ const Home = () => {
                   27<sup>o</sup>
                 </span>
               </div>
-              <GrNext className="ml-8" />
+              <RiArrowRightSLine className="ml-8 w-7 h-7 text-white" />
             </div>
             <div className="text-white flex justify-center items-center gap-2 mt-5">
               <BsSun />
               <span>Sunny</span>
             </div>
           </div>
-          <div className="w-[210px]  fixed bottom-7  ">
+          <div className="w-[210px]   ">
             <img src={weather} alt="My_Image" />
           </div>
         </div>
